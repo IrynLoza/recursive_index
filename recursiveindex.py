@@ -28,7 +28,12 @@ def recursive_index(needle, haystack):
 
     Do this with recursion. You MAY NOT USE A `for` OR `while` LOOP.
     """
-   
+    if needle not in haystack:
+        return None
+    if needle:
+        return haystack.index(needle)
+
+    return recursive_index(needle, haystack[1:])
 
 
 
